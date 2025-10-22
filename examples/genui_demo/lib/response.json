@@ -1,0 +1,1653 @@
+[
+  {
+    "event.name": "gen_ai.choice",
+    "finish_reason": "stop",
+    "index": 0,
+    "message": {
+      "content": [],
+      "role": "model"
+    },
+    "tool_calls": [
+      {
+        "function": {
+          "arguments": {
+            "action": "add",
+            "definition": {
+              "root": "root_column",
+              "widgets": [
+                {
+                  "id": "root_column",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_col_0",
+                        "card_col_1",
+                        "card_col_2",
+                        "card_col_3",
+                        "card_col_4",
+                        "card_col_5",
+                        "card_col_6",
+                        "card_col_7",
+                        "card_col_8",
+                        "card_col_9",
+                        "card_col_10",
+                        "card_col_11",
+                        "card_col_12",
+                        "card_col_13",
+                        "card_col_14",
+                        "card_col_15",
+                        "card_col_16",
+                        "card_col_17",
+                        "card_col_18",
+                        "card_col_19",
+                        "card_col_20",
+                        "card_col_21",
+                        "card_col_22",
+                        "card_col_23",
+                        "card_col_24",
+                        "card_col_25"
+                      ],
+                      "crossAxisAlignment": "center",
+                      "mainAxisAlignment": "start",
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_0",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_0",
+                        "card_text_0",
+                        "card_button_0"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_0",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/0/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_0",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #0 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_0",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.0.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_0"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_0",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_1",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_1",
+                        "card_text_1",
+                        "card_button_1"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_1",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/1/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_1",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #1 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_1",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.1.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_1"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_1",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_2",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_2",
+                        "card_text_2",
+                        "card_button_2"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_2",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/2/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_2",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #2 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_2",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.2.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_2"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_2",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_3",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_3",
+                        "card_text_3",
+                        "card_button_3"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_3",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/3/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_3",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #3 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_3",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.3.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_3"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_3",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_4",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_4",
+                        "card_text_4",
+                        "card_button_4"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_4",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/4/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_4",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #4 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_4",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.4.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_4"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_4",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_5",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_5",
+                        "card_text_5",
+                        "card_button_5"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_5",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/5/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_5",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #5 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_5",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.5.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_5"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_5",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_6",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_6",
+                        "card_text_6",
+                        "card_button_6"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_6",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/6/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_6",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #6 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_6",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.6.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_6"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_6",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_7",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_7",
+                        "card_text_7",
+                        "card_button_7"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_7",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/7/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_7",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #7 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_7",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.7.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_7"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_7",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_8",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_8",
+                        "card_text_8",
+                        "card_button_8"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_8",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/8/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_8",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #8 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_8",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.8.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_8"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_8",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_9",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_9",
+                        "card_text_9",
+                        "card_button_9"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_9",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/9/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_9",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #9 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_9",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.9.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_9"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_9",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_10",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_10",
+                        "card_text_10",
+                        "card_button_10"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_10",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/10/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_10",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #10 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_10",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.10.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_10"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_10",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_11",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_11",
+                        "card_text_11",
+                        "card_button_11"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_11",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/11/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_11",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #11 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_11",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.11.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_11"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_11",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_12",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_12",
+                        "card_text_12",
+                        "card_button_12"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_12",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/12/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_12",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #12 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_12",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.12.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_12"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_12",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_13",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_13",
+                        "card_text_13",
+                        "card_button_13"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_13",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/13/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_13",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #13 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_13",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.13.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_13"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_13",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_14",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_14",
+                        "card_text_14",
+                        "card_button_14"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_14",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/14/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_14",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #14 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_14",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.14.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_14"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_14",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_15",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_15",
+                        "card_text_15",
+                        "card_button_15"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_15",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/15/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_15",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #15 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_15",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.15.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_15"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_15",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_16",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_16",
+                        "card_text_16",
+                        "card_button_16"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_16",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/16/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_16",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #16 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_16",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.16.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_16"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_16",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_17",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_17",
+                        "card_text_17",
+                        "card_button_17"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_17",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/17/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_17",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #17 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_17",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.17.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_17"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_17",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_18",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_18",
+                        "card_text_18",
+                        "card_button_18"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_18",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/18/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_18",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #18 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_18",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.18.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_18"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_18",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_19",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_19",
+                        "card_text_19",
+                        "card_button_19"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_19",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/19/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_19",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #19 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_19",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.19.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_19"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_19",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_20",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_20",
+                        "card_text_20",
+                        "card_button_20"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_20",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/20/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_20",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #20 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_20",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.20.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_20"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_20",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_21",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_21",
+                        "card_text_21",
+                        "card_button_21"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_21",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/21/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_21",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #21 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_21",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.21.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_21"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_21",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_22",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_22",
+                        "card_text_22",
+                        "card_button_22"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_22",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/22/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_22",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #22 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_22",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.22.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_22"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_22",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_23",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_23",
+                        "card_text_23",
+                        "card_button_23"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_23",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/23/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_23",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #23 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_23",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.23.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_23"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_23",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_24",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_24",
+                        "card_text_24",
+                        "card_button_24"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_24",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/24/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_24",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #24 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_24",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.24.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_24"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_24",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_col_25",
+                  "widget": {
+                    "Column": {
+                      "children": [
+                        "card_image_25",
+                        "card_text_25",
+                        "card_button_25"
+                      ],
+                      "spacing": 8
+                    }
+                  }
+                },
+                {
+                  "id": "card_image_25",
+                  "widget": {
+                    "Image": {
+                      "fit": "cover",
+                      "location": {
+                        "literalString": "https://picsum.photos/seed/25/600/800"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_text_25",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "卡片 #25 的描述文案，支持两行展示"
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_25",
+                  "widget": {
+                    "ElevatedButton": {
+                      "action": {
+                        "actionName": "open_detail",
+                        "context": [
+                          {
+                            "key": "cardId",
+                            "path": "card_data.25.id"
+                          }
+                        ]
+                      },
+                      "child": "card_button_text_25"
+                    }
+                  }
+                },
+                {
+                  "id": "card_button_text_25",
+                  "widget": {
+                    "Text": {
+                      "text": {
+                        "literalString": "查看详情"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "surfaceId": "waterfall_homepage"
+          },
+          "name": "addOrUpdateSurface"
+        },
+        "id": "call_ba268e58",
+        "type": "function"
+      }
+    ]
+  }
+]

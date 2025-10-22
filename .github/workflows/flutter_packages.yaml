@@ -1,0 +1,153 @@
+# Copyright 2025 The Flutter Authors.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Flutter GenUI CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/flutter_packages.yaml"
+      - "packages/**"
+      - "examples/**"
+      - "tool/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/flutter_packages.yaml"
+      - "packages/**"
+      - "examples/**"
+      - "tool/**"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.generate_matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        with:
+          # Fetch the full history to be able to diff against the base branch
+          fetch-depth: 0
+
+      - name: Generate testing matrix
+        id: generate_matrix
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Find all directories containing pubspec.yaml in packages and examples.
+          ALL_DIRS=$(find packages examples -name pubspec.yaml -not -path "*/.dart_tool/*" -exec dirname {} \;)
+
+          # Get the list of changed files. The method depends on the event type.
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            # For PRs, use the GitHub CLI to get a precise list of changed files.
+            CHANGED_FILES=$(gh pr diff --name-only ${{ github.event.pull_request.number }})
+          else
+            # For pushes, diff between the two SHAs of the push.
+            CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
+          fi
+
+          # Build a regex to match any of the package directories or the workflow file.
+          REGEX="^\.github/workflows/flutter_packages.yaml$"
+          for dir in $ALL_DIRS; do
+            REGEX="$REGEX|^$dir/"
+          done
+
+          if echo "$CHANGED_FILES" | grep -q -E "$REGEX"; then
+            echo "Changes detected in package directories or workflow file. Testing all packages."
+            DIRS_TO_TEST=$ALL_DIRS
+          else
+            DIRS_TO_TEST=""
+          fi
+
+          # Build a JSON array of package objects for the matrix.
+          JSON_MATRIX="["
+          FIRST=true
+          for dir in $DIRS_TO_TEST; do
+            if [ "$FIRST" = false ]; then
+              JSON_MATRIX="$JSON_MATRIX,"
+            fi
+            FIRST=false
+            # The name for the job (path with '/' -> '_')
+            package_name=$(echo "$dir" | tr '/' '_')
+            # The actual path to the package
+            package_path="$dir"
+            JSON_MATRIX="$JSON_MATRIX{\"name\":\"$package_name\",\"path\":\"$package_path\"}"
+          done
+          JSON_MATRIX="$JSON_MATRIX]"
+
+          echo "matrix=$JSON_MATRIX" >> $GITHUB_OUTPUT
+
+  analyze_and_test:
+    needs: matrix
+    # Only run if the matrix job has produced a non-empty matrix.
+    if: github.repository == 'flutter/genui' && ${{ needs.matrix.outputs.matrix != '[]' }}
+    name: ${{ matrix.package.name }} (${{ matrix.flutter_version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        package: ${{ fromJson(needs.matrix.outputs.matrix) }}
+        flutter_version: [beta]
+        os: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165
+        with:
+          distribution: "zulu"
+          java-version: "17"
+          cache: "gradle"
+      - uses: subosito/flutter-action@e938fdf56512cc96ef2f93601a5a40bde3801046
+        with:
+          channel: ${{ matrix.flutter_version }}
+          cache: true
+      - name: Print Flutter version
+        run: flutter --version
+      - name: Cache Pub dependencies
+        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+        with:
+          path: ${{ env.PUB_CACHE }}
+          key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.lock') }}
+          restore-keys: ${{ runner.os }}-pub-
+      - name: Update submodules
+        working-directory: ${{ matrix.package.path }}
+        run: git submodule update --init --recursive
+      - name: Stub firebase_options.dart
+        run: sh tool/stub_firebase_options.sh
+      - name: Install dependencies
+        working-directory: ${{ matrix.package.path }}
+        run: dart pub get
+      - name: Check formatting
+        working-directory: ${{ matrix.package.path }}
+        run: dart format --output=none --set-exit-if-changed .
+      - name: Check copyrights
+        working-directory: ${{ matrix.package.path }}
+        run: |
+          (cd ${{ github.workspace }}/tool/fix_copyright && dart pub upgrade) > /dev/null 2>&1
+          dart ${{ github.workspace }}/tool/fix_copyright/bin/fix_copyright.dart --year 2025
+      - name: Analyze code
+        working-directory: ${{ matrix.package.path }}
+        run: flutter analyze --fatal-infos
+      - name: Run tests
+        working-directory: ${{ matrix.package.path }}
+        run: |
+          if [ -d "test" ]; then
+            flutter test --test-randomize-ordering-seed=random
+          else
+            echo "No 'test' directory found in ${{ matrix.package.path }}, skipping tests."
+          fi
+
+      - name: Check for cycles
+        working-directory: ${{ matrix.package.path }}
+        run: |
+          dart pub global activate layerlens
+          layerlens --fail-on-cycles  --except "lib/src/schema"
